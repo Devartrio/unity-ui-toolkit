@@ -1,0 +1,13 @@
+.button-Blue {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-elastic;
+    background-color: rgba(0, 25, 255, 0);
+}
+
+.button-Blue:hover {
+    scale: 1.1 1.1;
+}
+
+.button-Blue:active {
+    background-color: rgba(0, 87, 255, 0);
+}
