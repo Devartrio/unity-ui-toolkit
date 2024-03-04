@@ -1,7 +1,7 @@
 .button-Blue {
     transition-duration: 0.5s;
     transition-timing-function: ease-out-elastic;
-    background-color: rgba(0, 25, 255, 0);
+    background-color: rgb(0, 25, 255);
 }
 
 .button-Blue:hover {
@@ -9,5 +9,71 @@
 }
 
 .button-Blue:active {
-    background-color: rgba(0, 87, 255, 0);
+    background-color: rgb(99, 136, 207);
+}
+
+.text--title {
+    font-size: 80px;
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-top: 40px;
+    padding-right: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    -unity-font-definition: url('project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+    -unity-font: initial;
+    -unity-text-align: upper-center;
+    -unity-font-style: bold;
+}
+
+.text--paragraph {
+    white-space: normal;
+    font-size: 36px;
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-left-color: rgb(255, 0, 0);
+    border-right-color: rgb(255, 0, 0);
+    border-top-color: rgb(255, 0, 0);
+    border-bottom-color: rgb(255, 0, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    -unity-font-definition: url('project://database/Assets/Unity%20Technologies/QuizU%20-%20A%20UI%20Toolkit%20demo/_ThirdParty/Fonts/Roboto/Roboto-Medium%20SDF.asset?fileID=11400000&guid=db5974fdd47364381a7edc91a9df9b2f&type=2#Roboto-Medium SDF');
+}
+
+.bottomsheet {
+    translate: 0 100%;
+    transition-duration: 1s;
+    transition-timing-function: ease-out-bounce;
+    bottom: 0;
+    position: absolute;
+}
+
+.bottomsheet--up {
+    translate: 0 0;
+    transition-duration: 1s;
+    transition-timing-function: ease-out-bounce;
+    bottom: 0;
+    position: absolute;
+}
+
+.scrim {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.82);
+    opacity: 0;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out-back;
+}
+
+.scrim--fadein {
+    opacity: 1;
 }
