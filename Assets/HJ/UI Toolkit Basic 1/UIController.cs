@@ -55,6 +55,9 @@ namespace UiToolkitBasic
 
             // 소년 애니메이션
             Invoke(nameof(AnimateBoy), 0.1f);
+
+            // 바텀 시트가 내려온 다음 그룹 끄기
+            _bottomSheet.RegisterCallback<TransitionEndEvent>(OnBottomSheetDown);
         }
 
         void OnOpenButtonClicked(ClickEvent evt)
@@ -82,15 +85,9 @@ namespace UiToolkitBasic
             DOTween.To(() => _message.text, x => _message.text = x, m, 3f).SetEase(Ease.Linear);
         }
 
-        private void AnimateBackGirl(TransitionEndEvent evt)
-        {
-            
-        }
-
         void OnCloseButtonClicked(ClickEvent evt)
         {
-            // 시작할 때 바텀 시트 그룹 감추기.
-            _bottomContainer.style.display = DisplayStyle.None;
+            
 
             // 바텀 시트와 가림막 애니메이션
             _bottomSheet.RemoveFromClassList("bottomsheet--up");
@@ -101,6 +98,15 @@ namespace UiToolkitBasic
         {
             _boy.RemoveFromClassList("image--boy--inair");
 
+        }
+
+        void OnBottomSheetDown(TransitionEndEvent evt)
+        {
+            if (!_bottomSheet.ClassListContains("bottomsheet--up"))
+            {
+                // 시작할 때 바텀 시트 그룹 감추기.
+                _bottomContainer.style.display = DisplayStyle.None;
+            }
         }
     } 
 }
